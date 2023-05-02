@@ -1,0 +1,46 @@
+@import "./styles/index";
+
+body {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+
+  color: $color-primary;
+  background-color: $bg-color-primary;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
