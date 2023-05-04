@@ -4,20 +4,19 @@ import { Outlet } from "react-router-dom";
 import style from "./AuthPage.module.scss";
 
 const getClassName = ({ isActive }) => {
-  return isActive ? `${style.active} ${style.headerNav}` : style.headerNav;
+  return isActive ? `${style.active} ${style.navigation}` : style.navigation;
 };
 
 const AuthPage = () => {
   return (
     <div className="container">
-      <h1>POLUPAN AUTH</h1>
-      <div>
+      <div className={style.navContainer}>
         <NavLink to="login" className={getClassName}>
           Login
         </NavLink>
 
         <NavLink to="register" className={getClassName}>
-          Register
+          Sign in
         </NavLink>
         <Outlet />
       </div>

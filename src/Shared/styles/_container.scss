@@ -5,10 +5,8 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: grey;
-  @include media-query(responsive) {
-    // width: $mobile;
-  }
+  
+
   @include media-query(tablet) {
     padding-left: 32px;
     padding-right: 32px;

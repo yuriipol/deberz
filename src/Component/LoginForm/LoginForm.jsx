@@ -39,13 +39,19 @@ const LoginForm = ({ onSubmit }) => {
     setPassword("");
   };
   return (
-    <form onSubmit={hendleSubmit}>
-      <TextField value={email} onChange={hendleInputChange} {...fields.email} />
-      <TextField
-        value={password}
-        onChange={hendleInputChange}
-        {...fields.password}
-      />
+    <form onSubmit={hendleSubmit} className={s.loginForm}>
+      <div className={s.form}>
+        <TextField
+          value={email}
+          onChange={hendleInputChange}
+          {...fields.email}
+        />
+        <TextField
+          value={password}
+          onChange={hendleInputChange}
+          {...fields.password}
+        />
+      </div>
       <button type="submit" className={s.login}>
         Login
       </button>

@@ -1,6 +1,6 @@
-import s from './TextField.module.scss';
-import { nanoid } from 'nanoid';
-import { useMemo } from 'react';
+import s from "./TextField.module.scss";
+import { nanoid } from "nanoid";
+import { useMemo } from "react";
 
 const TextField = ({
   label,
@@ -40,6 +40,6 @@ const TextField = ({
 export default TextField;
 
 TextField.defaultProps = {
-  type: 'text',
+  type: "text",
   required: false,
 };

@@ -6,10 +6,13 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
 
-  //   color: $color-primary;
-  //   background-image: url("./Shared/Images/cards_playing_cards-177214.jpg");
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
+  background: rgb(36, 10, 0);
+  background: linear-gradient(
+    to left,
+    rgba(36, 10, 0, 1) 0%,
+    rgba(181, 5, 5, 1) 68%,
+    rgba(255, 0, 0, 1) 100%
+  );
 }
 
 code {

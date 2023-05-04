@@ -45,7 +45,7 @@ const RegisterForm = ({ onSubmit }) => {
     setPassword("");
   };
   return (
-    <form onSubmit={hendleSubmit}>
+    <form onSubmit={hendleSubmit} className={s.registerForm}>
       <TextField value={name} onChange={hendleInputChange} {...fields.name} />
       <TextField value={email} onChange={hendleInputChange} {...fields.email} />
       <TextField
@@ -54,7 +54,7 @@ const RegisterForm = ({ onSubmit }) => {
         {...fields.password}
       />
       <button type="submit" className={s.registerButton}>
-        Register user
+        Sign in
       </button>
     </form>
   );
