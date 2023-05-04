@@ -1,40 +1,26 @@
-import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-import bel1 from "../../Shared/Images/Home/Bel1.jpg";
-import bel2 from "../../Shared/Images/Home/Bel2.jpg";
-import bel3 from "../../Shared/Images/Home/Bel3.jpg";
+import style from "./AuthPage.module.scss";
+
+const getClassName = ({ isActive }) => {
+  return isActive ? `${style.active} ${style.headerNav}` : style.headerNav;
+};
 
 const AuthPage = () => {
   return (
     <div className="container">
-      <Carousel>
-        <Carousel.Item>
-          <img className="d-block w-100" src={bel1} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={bel2} alt="Second slide" />
+      <h1>POLUPAN AUTH</h1>
+      <div>
+        <NavLink to="login" className={getClassName}>
+          Login
+        </NavLink>
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={bel3} alt="Third slide" />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+        <NavLink to="register" className={getClassName}>
+          Register
+        </NavLink>
+        <Outlet />
+      </div>
     </div>
   );
 };
