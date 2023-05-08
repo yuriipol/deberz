@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import PrivateRoute from "./PrivateRoutes";
+import Loading from "../Spinner/Spinner";
 
 const AuthPage = lazy(() => import("../../Pages/AuthPage/AuthPage"));
 const LoginPage = lazy(() =>
@@ -20,7 +21,7 @@ const NotFoundPage = lazy(() =>
 
 const UserRoutes = () => {
   return (
-    <Suspense fallback={<h3>Loading page...</h3>}>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<AuthPage />}>
           <Route path="login" element={<LoginPage />} />
