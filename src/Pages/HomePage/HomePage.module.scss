@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px 5px black;
+  text-transform: uppercase;
+}
+.gallery {
+  margin-top: 40px;
+  display: grid;
+  max-width: calc(100vw - 48px);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+}

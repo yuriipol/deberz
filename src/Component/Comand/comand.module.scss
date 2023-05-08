@@ -1,0 +1,43 @@
+.card {
+  border: 2px solid red;
+  border-radius: 10px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 5px black;
+    cursor: pointer;
+  }
+}
+.titleComand {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 5px black;
+  text-transform: uppercase;
+}
+.containerFotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user:not(:last-child) {
+  margin-right: 20px;
+}
+.avatar {
+  object-fit: cover;
+  width: 150px;
+}
+.fio {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 5px black;
+}
+.countOfWin,
+.countOfCups {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 5px black;
+}
