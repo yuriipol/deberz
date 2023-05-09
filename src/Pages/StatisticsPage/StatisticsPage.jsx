@@ -1,5 +1,11 @@
+import FormAddWinners from "../../Component/FormAddWinners/FormAddWinners";
+
 const StatisticsPage = () => {
-  return <h1>Statistics</h1>;
+  return (
+    <div className="container">
+      <FormAddWinners />
+    </div>
+  );
 };
 
 export default StatisticsPage;
