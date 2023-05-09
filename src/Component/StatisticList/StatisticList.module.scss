@@ -1,0 +1,30 @@
+.infoListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border: 2px solid red;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.info {
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 5px black;
+}
+.buttonDelete {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    font-weight: bold;
+    border: 1px solid white;
+  }
+}

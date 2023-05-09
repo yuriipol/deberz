@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import s from "./FormAddWinners.module.scss";
 
-const FormAddWinners = () => {
+const FormAddWinners = ({ onSubmit }) => {
   const comands = [
     "choose a team...",
     "Polupan & Pavlov",
@@ -27,7 +27,7 @@ const FormAddWinners = () => {
       placeOfCup: placeOfCup,
     };
     console.log(data);
-    // onSubmit(data);
+    onSubmit(data);
 
     resetForm();
   };
@@ -54,33 +54,45 @@ const FormAddWinners = () => {
   });
   return (
     <div className="container">
-      <form onSubmit={hendleSubmit} className={s.formAddStat}>
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          dateFormat="dd.MM.yyyy"
-        />
-        <select
-          value={comand}
-          onChange={(event) => setComand(event.target.value)}
-        >
-          {optionsComands}
-        </select>
-        <select
-          value={placeOfChamp}
-          onChange={(event) => setPlaceOfChamp(event.target.value)}
-        >
-          {optionsPlaces}
-        </select>
-        <select
-          value={placeOfCup}
-          onChange={(event) => setPlaceOfCup(event.target.value)}
-        >
-          {optionsPlaces}
-        </select>
-        <p>your choice: {comand}</p>
-        <p>place of champion day: {placeOfChamp}</p>
-        <p>place of cup day: {placeOfCup}</p>
+      <form onSubmit={hendleSubmit} className={s.form}>
+        <div className={s.addForm}>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            dateFormat="dd.MM.yyyy"
+            className={s.datePicker}
+          />
+          <select
+            value={comand}
+            onChange={(event) => setComand(event.target.value)}
+            className={s.select}
+          >
+            {optionsComands}
+          </select>
+          <select
+            value={placeOfChamp}
+            onChange={(event) => setPlaceOfChamp(event.target.value)}
+            className={s.select}
+          >
+            {optionsPlaces}
+          </select>
+          <select
+            value={placeOfCup}
+            onChange={(event) => setPlaceOfCup(event.target.value)}
+            className={s.select}
+          >
+            {optionsPlaces}
+          </select>
+        </div>
+        <p className={s.choise}>
+          your choice:<span className={s.choose}> {comand}</span>
+        </p>
+        <p className={s.choise}>
+          place of champion day:<span className={s.choose}> {placeOfChamp} </span>
+        </p>
+        <p className={s.choise}>
+          place of cup day:<span className={s.choose}> {placeOfCup} </span>
+        </p>
         <button type="submit" className={s.addStat}>
           Add info
         </button>
