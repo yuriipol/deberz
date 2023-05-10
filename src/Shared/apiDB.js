@@ -21,3 +21,12 @@ export const uploadInfo = async (data) => {
     console.log(error);
   }
 };
+
+export const deleteInfo = async (id) => {
+  await deleteDoc(doc(db, "statistic", id));
+};
+
+export const updateInfo = async (id, data) => {
+  const infoRef = doc(db, "statistic", id);
+  await updateDoc(infoRef, { ...data });
+};

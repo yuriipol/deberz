@@ -1,11 +1,12 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
+import { updateInfo } from "../../Shared/apiDB";
 
 import "react-datepicker/dist/react-datepicker.css";
 
 import s from "./FormChangeStatInfo.module.scss";
 
-const FormChangeStatInfo = ({ onSubmit }) => {
+const FormChangeStatInfo = ({ findContact }) => {
   const comands = [
     "choose a team...",
     "Polupan & Pavlov",
@@ -26,8 +27,8 @@ const FormChangeStatInfo = ({ onSubmit }) => {
       placeOfChamp: placeOfChamp,
       placeOfCup: placeOfCup,
     };
-    console.log(data);
-    onSubmit(data);
+    // console.log(data);
+    updateInfo(findContact.id, data);
 
     resetForm();
   };

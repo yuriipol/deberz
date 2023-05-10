@@ -1,6 +1,7 @@
+import { deleteInfo } from "../../Shared/apiDB";
 import s from "./StatisticList.module.scss";
 
-const StatisticList = ({ info, onDeleteInfoListItem, onClick }) => {
+const StatisticList = ({ info, onClick }) => {
   return (
     <ol className={s.list}>
       {info.map(({ id, date, comand, placeOfChamp, placeOfCup }) => (
@@ -9,10 +10,7 @@ const StatisticList = ({ info, onDeleteInfoListItem, onClick }) => {
           <p className={s.info}>{comand}</p>
           <p className={s.info}>Championship: {placeOfChamp}</p>
           <p className={s.info}>Cup: {placeOfCup}</p>
-          <button
-            className={s.buttonDelete}
-            onClick={() => onDeleteInfoListItem(id)}
-          >
+          <button className={s.buttonDelete} onClick={() => deleteInfo(id)}>
             remove
           </button>
         </li>

@@ -26,7 +26,7 @@ const FormAddWinners = ({ onSubmit }) => {
       placeOfChamp: placeOfChamp,
       placeOfCup: placeOfCup,
     };
-    console.log(data);
+    // console.log(data);
     onSubmit(data);
 
     resetForm();
@@ -88,7 +88,8 @@ const FormAddWinners = ({ onSubmit }) => {
           your choice:<span className={s.choose}> {comand}</span>
         </p>
         <p className={s.choise}>
-          place of champion day:<span className={s.choose}> {placeOfChamp} </span>
+          place of champion day:
+          <span className={s.choose}> {placeOfChamp} </span>
         </p>
         <p className={s.choise}>
           place of cup day:<span className={s.choose}> {placeOfCup} </span>
