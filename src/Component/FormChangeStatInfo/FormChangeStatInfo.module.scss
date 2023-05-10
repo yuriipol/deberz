@@ -1,0 +1,66 @@
+.addForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.addStat {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+  &:hover,
+  &:focus {
+    box-shadow: rgb(255, 55, 0) 200px 0px 1px inset;
+    font-weight: bold;
+  }
+  margin-top: 10px;
+}
+.datePicker {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  padding: 10px;
+  //   margin-right: 20px;
+  border: 1px solid white;
+  background-color: rgb(255, 55, 0);
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+}
+.select {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(255, 55, 0);
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  margin-top: 10px;
+  width: 150px;
+}
+// .select:not(:last-child) {
+//   margin-top: 10px;
+// }
+.choise {
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 5px black;
+}
+.choose {
+  color: white;
+  font-size: 20px;
+  text-shadow: 5px 5px 15px black;
+}

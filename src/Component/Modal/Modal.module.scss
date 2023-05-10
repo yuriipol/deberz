@@ -1,0 +1,40 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 380px;
+  max-width: 600px;
+  width: 100%;
+  padding: 12px;
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #de9c2c 0,
+    #e5922a 8.33%,
+    #ea852b 16.67%,
+    #ee772d 25%,
+    #f16731 33.33%,
+    #f35436 41.67%,
+    #f23c3c 50%,
+    #f01843 58.33%,
+    #ed004c 66.67%,
+    #e90057 75%,
+    #e30064 83.33%,
+    #db0071 91.67%,
+    #d10080 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
