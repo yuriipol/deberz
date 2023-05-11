@@ -52,8 +52,8 @@ const HomePage = () => {
           userFotoTwo={belik}
           fioOne="Mikhail Fesenko"
           fioTwo="Oleksandr Belik"
-          countOfWin="20"
-          countOfCups="10"
+          countOfWin={result?.teamTwo?.wins}
+          countOfCups={result?.teamTwo?.cups}
         />
         <Comand
           nameComand="Novikov & Garyachov"
@@ -61,8 +61,8 @@ const HomePage = () => {
           userFotoTwo={garyachov}
           fioOne="Oleksandr Novikov"
           fioTwo="Yurii Garyachov"
-          countOfWin="20"
-          countOfCups="10"
+          countOfWin={result?.teamThree?.wins}
+          countOfCups={result?.teamThree?.cups}
         />
       </div>
       <h1 className={s.title}>foto after games</h1>

@@ -22,8 +22,8 @@ const Comand = ({
           <p className={s.fio}>{fioTwo}</p>
         </div>
       </div>
-      <p className={s.countOfWin}>Wins:{countOfWin}</p>
-      <p className={s.countOfCups}>Cups:{countOfCups}</p>
+      <p className={s.countOfWin}>Wins: {countOfWin}</p>
+      <p className={s.countOfCups}>Cups: {countOfCups}</p>
     </div>
   );
 };

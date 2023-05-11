@@ -1,16 +1,29 @@
+@import "../../Shared/styles/index";
+
+.list {
+  padding-left: 0;
+}
 .infoListItem {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 40px;
+  flex-direction: column;
+
+  // height: 40px;
   border: 2px solid red;
   border-radius: 5px;
   margin-top: 10px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+  }
 }
 .info {
   color: white;
   font-size: 15px;
   text-shadow: 1px 1px 5px black;
+  margin-bottom: 0;
 }
 .buttonDelete {
   display: block;

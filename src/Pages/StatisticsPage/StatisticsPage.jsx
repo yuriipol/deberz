@@ -91,6 +91,7 @@ const StatisticsPage = () => {
           // console.log(event.target.value);
           setFilter(event.target.value);
         }}
+        className={s.filter}
       />
 
       <StatisticList info={filterList} onClick={findIdContact} />
@@ -103,6 +104,7 @@ const StatisticsPage = () => {
               query(collection(db, "statistic"), limit((page + 1) * 10))
             );
           }}
+          className={s.loadMore}
         >
           Load more
         </button>
