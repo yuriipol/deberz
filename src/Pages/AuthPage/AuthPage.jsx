@@ -10,16 +10,20 @@ const getClassName = ({ isActive }) => {
 const AuthPage = () => {
   return (
     <div className="container">
-      <div className={style.navContainer}>
-        <NavLink to="login" className={getClassName}>
-          Login
-        </NavLink>
+      <header>
+        <div className={style.navContainer}>
+          <NavLink to="login" className={getClassName}>
+            Login
+          </NavLink>
 
-        <NavLink to="register" className={getClassName}>
-          Sign in
-        </NavLink>
-        <Outlet />
-      </div>
+          <NavLink to="register" className={getClassName}>
+            Sign in
+          </NavLink>
+          <Outlet />
+        </div>
+        <h1 className={style.title}> Welcome</h1>
+        <div className={style.imgContainer}></div>
+      </header>
     </div>
   );
 };
