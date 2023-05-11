@@ -24,6 +24,7 @@ const StatisticsPage = () => {
   );
   const [isShow, setIsShow] = useState(true);
   const [sizeInfo, setSizeinfo] = useState(null);
+  const [filter, setFilter] = useState("");
 
   // console.log(sizeInfo);
   const hendleSubmit = (data) => {
@@ -74,10 +75,25 @@ const StatisticsPage = () => {
       toggleModal();
     }
   };
+  const filterList = info.filter((item) =>
+    item.comand.toLowerCase().includes(filter.toLocaleLowerCase())
+  );
+  console.log(filter);
   return (
     <div className="container">
       <FormAddWinners onSubmit={hendleSubmit} />
-      <StatisticList info={info} onClick={findIdContact} />
+
+      <input
+        type="search"
+        name="filter"
+        value={filter}
+        onChange={(event) => {
+          // console.log(event.target.value);
+          setFilter(event.target.value);
+        }}
+      />
+
+      <StatisticList info={filterList} onClick={findIdContact} />
       {isShow && (
         <button
           type="button"

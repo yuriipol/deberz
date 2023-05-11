@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Comand from "../../Component/Comand/Comand";
 import UserMenu from "../../Component/UserMenu/UserMenu";
@@ -12,10 +13,20 @@ import cup2 from "../../Shared/Images/Home/fotos/cup2.jpg";
 import cup3 from "../../Shared/Images/Home/fotos/campions.jpg";
 import cup4 from "../../Shared/Images/Home/fotos/teams.jpg";
 import cup5 from "../../Shared/Images/Home/fotos/winners.jpg";
+import { resultWins } from "../../Shared/apiDB";
 
 import s from "./HomePage.module.scss";
 
 const HomePage = () => {
+  const [result, setResult] = useState({});
+
+  useEffect(() => {
+    resultWins().then((data) => {
+      setResult(data);
+    });
+  }, []);
+
+  // console.log(result);
   return (
     <div className="container">
       <div className={s.headerPage}>
@@ -32,8 +43,8 @@ const HomePage = () => {
           userFotoTwo={pavlov}
           fioOne="Yurii Polupan"
           fioTwo="Serhii Pavlov"
-          countOfWin="20"
-          countOfCups="10"
+          countOfWin={result?.teamOne?.wins}
+          countOfCups={result?.teamOne?.cups}
         />
         <Comand
           nameComand="Fesenko & Belik"
