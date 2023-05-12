@@ -1,3 +1,4 @@
+@import "../../Shared/styles/index";
 .overlay {
   position: fixed;
   top: 0;
@@ -15,7 +16,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   min-height: 380px;
-  max-width: 600px;
+  max-width: 320px;
+  @media screen and (min-width: $tablet) {
+    max-width: 600px;
+  }
   width: 100%;
   padding: 12px;
   background-image: radial-gradient(
