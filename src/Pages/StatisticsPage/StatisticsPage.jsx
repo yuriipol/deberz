@@ -76,13 +76,13 @@ const StatisticsPage = () => {
     }
   };
   const filterList = info.filter((item) =>
-    item.comand.toLowerCase().includes(filter.toLocaleLowerCase())
+    item.date.toLowerCase().includes(filter.toLocaleLowerCase())
   );
-  console.log(filter);
+  // console.log(filter);
   return (
     <div className="container">
       <FormAddWinners onSubmit={hendleSubmit} />
-      <label className={s.label}>Filter by name of team</label>
+      <label className={s.label}>Filter by date</label>
       <input
         type="search"
         name="filter"
