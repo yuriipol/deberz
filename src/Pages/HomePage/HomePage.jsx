@@ -14,6 +14,7 @@ import cup3 from "../../Shared/Images/Home/fotos/campions.jpg";
 import cup4 from "../../Shared/Images/Home/fotos/teams.jpg";
 import cup5 from "../../Shared/Images/Home/fotos/winners.jpg";
 import { resultWins } from "../../Shared/apiDB";
+// import useAuth from "../../Shared/hooks/useAuth";
 
 import s from "./HomePage.module.scss";
 
@@ -27,12 +28,14 @@ const HomePage = () => {
   }, []);
 
   // console.log(result);
+
   return (
     <div className="container">
       <div className={s.headerPage}>
         <NavLink to="/statistics" className={s.statLink}>
           Statistics
         </NavLink>
+
         <UserMenu />
       </div>
       <h1 className={s.title}>teams</h1>
