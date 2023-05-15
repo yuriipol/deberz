@@ -82,7 +82,7 @@ const StatisticsPage = () => {
   return (
     <div className="container">
       <FormAddWinners onSubmit={hendleSubmit} />
-
+      <label className={s.label}>Filter by name of team</label>
       <input
         type="search"
         name="filter"
