@@ -58,9 +58,9 @@ const getCountResultGames = async (name) => {
 };
 
 export const resultWins = async () => {
-  const teamOne = await getCountResultGames("Polupan & Pavlov");
-  const teamTwo = await getCountResultGames("Fesenko & Belik");
-  const teamThree = await getCountResultGames("Novikov & Garyachov");
+  const teamOne = await getCountResultGames("Polupan & Pavlov & Shikhovtsov");
+  const teamTwo = await getCountResultGames("Novikov & Belik");
+  const teamThree = await getCountResultGames("Fesenko & Garyachov");
   const resultOfGamesWins = {
     teamOne,
     teamTwo,

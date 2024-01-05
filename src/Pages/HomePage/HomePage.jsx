@@ -5,6 +5,7 @@ import UserMenu from "../../Component/UserMenu/UserMenu";
 import polupan from "../../Shared/Images/Home/Polupan.jpg";
 import belik from "../../Shared/Images/Home/Belik.jpg";
 import pavlov from "../../Shared/Images/Home/Pavlov.png";
+import shiha from "../../Shared/Images/Home/Bunny.jpg";
 import garyachov from "../../Shared/Images/Home/garyachov.png";
 import fesenko from "../../Shared/Images/Home/Fesenko.png";
 import novikov from "../../Shared/Images/Home/Novikov.png";
@@ -27,7 +28,7 @@ const HomePage = () => {
     });
   }, []);
 
-  // console.log(result);
+  console.log(result);
 
   return (
     <div className="container">
@@ -41,28 +42,30 @@ const HomePage = () => {
       <h1 className={s.title}>teams</h1>
       <div className={s.gallery}>
         <Comand
-          nameComand="Polupan & Pavlov"
+          nameComand="Polupan & Pavlov & Shikhovtsov"
           userFotoOne={polupan}
           userFotoTwo={pavlov}
+          userFotoThree={shiha}
           fioOne="Yurii Polupan"
           fioTwo="Serhii Pavlov"
+          fioThree="Serhii Shikhovtsov"
           countOfWin={result?.teamOne?.wins}
           countOfCups={result?.teamOne?.cups}
         />
         <Comand
-          nameComand="Fesenko & Belik"
-          userFotoOne={fesenko}
+          nameComand="Novikov & Belik"
+          userFotoOne={novikov}
           userFotoTwo={belik}
-          fioOne="Mikhail Fesenko"
+          fioOne="Oleksandr Novikov"
           fioTwo="Oleksandr Belik"
           countOfWin={result?.teamTwo?.wins}
           countOfCups={result?.teamTwo?.cups}
         />
         <Comand
-          nameComand="Novikov & Garyachov"
-          userFotoOne={novikov}
+          nameComand="Fesenko & Garyachov"
+          userFotoOne={fesenko}
           userFotoTwo={garyachov}
-          fioOne="Oleksandr Novikov"
+          fioOne="Mikhail Fesenko"
           fioTwo="Yurii Garyachov"
           countOfWin={result?.teamThree?.wins}
           countOfCups={result?.teamThree?.cups}

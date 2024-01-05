@@ -8,9 +8,9 @@ import s from "./FormAddWinners.module.scss";
 const FormAddWinners = ({ onSubmit }) => {
   const comands = [
     "choose a team...",
-    "Polupan & Pavlov",
-    "Fesenko & Belik",
-    "Novikov & Garyachov",
+    "Polupan & Pavlov & Shikhovtsov",
+    "Novikov & Belik",
+    "Fesenko & Garyachov",
   ];
   const places = ["choose a place...", "1 place", "2 place", "3 place"];
   const [comand, setComand] = useState("");
