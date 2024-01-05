@@ -14,6 +14,7 @@ import cup2 from "../../Shared/Images/Home/fotos/cup2.jpg";
 import cup3 from "../../Shared/Images/Home/fotos/campions.jpg";
 import cup4 from "../../Shared/Images/Home/fotos/teams.jpg";
 import cup5 from "../../Shared/Images/Home/fotos/winners.jpg";
+import cup6 from "../../Shared/Images/Home/fotos/king.jpg"
 import { resultWins } from "../../Shared/apiDB";
 // import useAuth from "../../Shared/hooks/useAuth";
 
@@ -48,7 +49,7 @@ const HomePage = () => {
           userFotoThree={shiha}
           fioOne="Yurii Polupan"
           fioTwo="Serhii Pavlov"
-          fioThree="Serhii Shikhovtsov"
+          fioThree="Oleksandr Shikhovtsov"
           countOfWin={result?.teamOne?.wins}
           countOfCups={result?.teamOne?.cups}
         />
@@ -78,6 +79,7 @@ const HomePage = () => {
         <img src={cup3} alt="foto" className={s.foto} />
         <img src={cup4} alt="foto" className={s.foto} />
         <img src={cup5} alt="foto" className={s.foto} />
+        <img src={cup6} alt="foto" className={s.foto} />
       </div>
     </div>
   );
